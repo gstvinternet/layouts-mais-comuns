@@ -23,11 +23,24 @@ header {
 }
 
 nav {
-    flex: 1 1 200px;
+    flex: 1 1 100vw;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+mav a {
+    font-size: 20pt;
+}
+
+a {
+    margin: 5%;
+    text-decoration: none;
+    color: inherit;
 }
 
 main {
-    height: calc(100vh - 224px);
+    height: calc(100vh - 330px);
     flex: 20 1 500px;
 
 }
@@ -45,7 +58,7 @@ footer {
 
 @media only screen and (max-width: 923px){
     main {
-        height: calc(100vh - 330px);
+        height: calc(100vh - 436px);
     }
     aside {
         flex: 1 1 100vw;
