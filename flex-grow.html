@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-grow</title>
+    <style type="text/css">
+        main{
+            display: flex;
+        }
+        /*Seleciona elementos com base em suas posições em um grupo de elementos irmãos.*/
+        main > :nth-child(1){
+            /*Habilidade de um flex item crescer*/
+            flex-grow: 0;
+            /*Capacidade de redução do item*/
+            flex-shrink: 1;
+            /*Tamanho inicial do item*/
+            flex-basis: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section>Seção 1</section>
+        <section>Seção 2</section>
+    </main>
+</body>
+</html>
