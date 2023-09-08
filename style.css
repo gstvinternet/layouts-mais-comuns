@@ -17,30 +17,44 @@ header, nav, main, aside, footer{
     margin: 3px;
 }
 
+header #logo {
+    flex: 0 1 200px;
+    background: rgb(85, 255, 85);
+}
+
+#openMenu, #closeMenu {
+    border: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px 5px 0px 5px;
+    cursor: pointer;
+    display: none;
+}
+
 header {
     height: 100px;
-    flex: 20 1 100vw;
+    flex: 1 1 100vw;
 }
 
 nav {
     flex: 1 1 100vw;
-    height: 100px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
-mav a {
+nav a {
     font-size: 20pt;
+    margin: 3%;
 }
 
 a {
-    margin: 5%;
     text-decoration: none;
     color: inherit;
 }
 
 main {
-    height: calc(100vh - 330px);
+    height: calc(100vh - 224px);
     flex: 20 1 500px;
 
 }
@@ -58,7 +72,7 @@ footer {
 
 @media only screen and (max-width: 923px){
     main {
-        height: calc(100vh - 436px);
+        height: calc(100vh - 330px);
     }
     aside {
         flex: 1 1 100vw;
@@ -71,6 +85,34 @@ footer {
         height: 100px;
     }
     main {
-        height: calc(100vh - 436px);
+        height: calc(100vh - 224px);
+    }
+}
+
+@media only screen and (max-width: 717px) {
+    #openMenu, #closeMenu {
+        display: block;
+    }
+
+    #openMenu {
+        margin-left: auto;
+    }
+
+    #closeMenu {
+        position: fixed;
+        right: 15px;
+        top: 15px;
+    }
+
+    nav {
+        position: fixed;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.8);
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        display: none;
     }
 }
